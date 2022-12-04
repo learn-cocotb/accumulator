@@ -11,7 +11,6 @@ method ActionValue#(Bit#(32)) cfg(Bit#(8) address,Bit#(32)data_in,Bool op);
 endinterface
 
 (*synthesize*)
-
 module dut(Ifc_dut);
 	Reg#(Bit#(8)) current_count <-mkRegA(0);
 	Reg#(Bit#(8)) programmed_length <-mkRegA(0);
