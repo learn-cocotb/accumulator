@@ -44,10 +44,11 @@ The configuration interface is used by the processor to change the behavior of t
 
 # Configuration Space Register Map
 
-| Address | Access | Bit map | reset value | Field             | Description                                      |
-| ---     | ---    | ---     | ---         | ---               | ------                                           |
-| 0       | R      | 7:0     | 0           | current_count     | The count of bytes processed                     |
-| 0       | R      | 15:8    | 0           | programmed_length | The length programmed for this session           |
-| 0       | R      | 16      | 0           | busy              | An operation has started and is ongoing          |
-| 4       | R/W    | 0       | 0           | s/w override      | 0 => use len from port. 1=>use len from register |
-| 8       | R/W    | 7:0     | 0           | len               | len register                                     |
+| Address | Access | Bit map | reset value | Field             | Description                                                                      |
+| ---     | ---    | ---     | ---         | ---               | ------                                                                           |
+| 0       | R      | 7:0     | 0           | current_count     | The count of bytes processed                                                     |
+| 0       | R      | 15:8    | 0           | programmed_length | The length programmed for this session                                           |
+| 0       | R      | 16      | 0           | busy              | An operation has started and is ongoing                                          |
+| 4       | R/W    | 0       | 0           | s/w override      | 0 => use len from port. 1=>use len from register                                 |
+| 4       | R/W    | 1       | 0           | pause             | 0 => normal mode. 1=>Input Rdy will be deasserted after end of current data set. |
+| 8       | R/W    | 7:0     | 0           | len               | len register                                                                     |
