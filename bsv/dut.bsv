@@ -2,7 +2,7 @@ import FIFOF::*;
 interface Ifc_dut;
 	(*ready="din_rdy",enable="din_en"*)
 method Action din(Bit#(8) value);
-(*ready="dout_rdy",enable="dout_en",result="dout_data"*)
+(*ready="dout_rdy",enable="dout_en",result="dout_value"*)
 method ActionValue#(Bit#(8)) dout();
  (*ready="len_rdy",enable="len_en"*)
 method Action len(Bit#(8) value);
